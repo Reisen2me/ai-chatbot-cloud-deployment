@@ -1,0 +1,18 @@
+# ILLUSTRATIVE ONLY — not the user's live systemd unit and not verified.
+# Upstream NapCat / QQ software is NOT included in this repository.
+# Replace all paths after checking the official installation method.
+[Unit]
+Description=Personal QQ messaging adapter (example)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Napcat
+ExecStart=/usr/bin/xvfb-run -a /home/ubuntu/Napcat/opt/QQ/qq --no-sandbox
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
