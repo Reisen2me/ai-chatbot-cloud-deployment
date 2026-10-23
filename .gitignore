@@ -1,0 +1,32 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*secret*
+*token*
+
+# Credentials and session data
+credentials/
+sessions/
+.auth/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Local configurations
+config.local.*
+settings.local.*
